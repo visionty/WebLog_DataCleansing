@@ -75,4 +75,4 @@ VALUES (@RowCountBulkInsert, @RowCountWebLogStg, @RowCountCleansing, @RowCountFi
 END
 
 -- Execute the stored procedure
-EXEC spWebLog 'C:\MSBI Part 1 SSIS\DataFiles&Docs\access1\access1.log';
+EXEC spWebLog 'C:\SQL2014\Projects\Weblog\WebLogAccess.log';
