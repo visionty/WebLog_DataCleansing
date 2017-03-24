@@ -76,8 +76,3 @@ END
 
 -- Execute the stored procedure
 EXEC spWebLog 'C:\MSBI Part 1 SSIS\DataFiles&Docs\access1\access1.log';
-
---Check number of rows
-
-SELECT COUNT(*) FROM WebLogStg
-SELECT COUNT(*) FROM WebLog
