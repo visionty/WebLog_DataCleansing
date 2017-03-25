@@ -9,7 +9,7 @@ CREATE TABLE [dbo].[WebLogStg](
    [Size] [varchar](200) NULL
 ) ON [PRIMARY]
 
-CREATE TABLE [dbo].[WebLog](
+CREATE TABLE [dbo].[VideoWebLog](
    [IP] [varchar](100) NOT NULL,
    [connectTime] [datetime] NULL,
    [WebPage] [varchar](300) NOT NULL,
