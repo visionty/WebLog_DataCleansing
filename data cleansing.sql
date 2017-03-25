@@ -12,7 +12,7 @@ CREATE TABLE [dbo].[WebLogStg](
 CREATE TABLE [dbo].[VideoWebLog](
    [IP] [varchar](100) NOT NULL,
    [connectTime] [datetime] NULL,
-   [WebPage] [varchar](300) NOT NULL,
+   [VideoPage] [varchar](300) NOT NULL,
    [size] [int] NULL
 ) ON [PRIMARY]
 
@@ -55,7 +55,7 @@ MAXERRORS=99999999)';
    -- Clean each useful column and load to destination table
 
 TRUNCATE TABLE VideoWebLog
-INSERT INTO WebVideoLog (IP, connectTime, WebPage, size)
+INSERT INTO WebVideoLog (IP, connectTime, VideoPage, size)
 SELECT RTRIM(LTRIM(IP)), 
 CONVERT(datetime, CONCAT(SUBSTRING(conTime, 2, 11), ' ', SUBSTRING(conTime, 14, 21)), 106),
 REPLACE(Page, 'GET', ''), 
