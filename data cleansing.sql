@@ -54,8 +54,8 @@ MAXERRORS=99999999)';
 
    -- Clean each useful column and load to destination table
 
-TRUNCATE TABLE WebLog
-INSERT INTO WebLog (IP, connectTime, WebPage, size)
+TRUNCATE TABLE VideoWebLog
+INSERT INTO WebVideoLog (IP, connectTime, WebPage, size)
 SELECT RTRIM(LTRIM(IP)), 
 CONVERT(datetime, CONCAT(SUBSTRING(conTime, 2, 11), ' ', SUBSTRING(conTime, 14, 21)), 106),
 REPLACE(Page, 'GET', ''), 
